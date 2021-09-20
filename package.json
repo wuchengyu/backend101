@@ -10,5 +10,11 @@
   ],
   "devDependencies": {
     "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "scripts": {
+    "start:dev": "nodemon --inspect -r dotenv/config router"
   }
 }
