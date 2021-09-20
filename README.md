@@ -29,13 +29,13 @@
 ### TODO
 
 - CI/CD
-  - docker
-  - k8s
-  - github actions
+  - [ ] docker
+  - [ ] k8s
+  - [X] github actions
 - Develop
-  - redis
-  - mongodb
+  - [ ] redis
+  - [ ] mongodb
   - third-party
-    - google
-    - firebase
-  - swagger
+    - [ ] google
+    - [ ] firebase
+  - [ ] swagger
