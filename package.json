@@ -16,6 +16,7 @@
     "dotenv": "^10.0.0"
   },
   "scripts": {
+    "doc:gen": "node scripts/generate-swagger.js",
     "start": "NODE_ENV=prouction nodemon --inspect -r dotenv/config router",
     "start:dev": "NODE_ENV=development nodemon --inspect -r dotenv/config router dotenv_config_path=.env.dev",
     "test": "jest --verbose",
