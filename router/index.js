@@ -3,7 +3,7 @@ const cors = require('cors');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('router/swagger.json');
 
-const demo_add = require('router/demo/add');
+const demoAdd = require('router/demo/add');
 
 const DEV = process.env.NODE_ENV !== 'production';
 
@@ -21,7 +21,7 @@ app.use((req, _res, next) => {
   next();
 });
 
-app.use('/demo/add', demo_add);
+app.use('/demo/add', demoAdd);
 
 if (DEV) {
   // Swagger
