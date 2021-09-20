@@ -38,4 +38,6 @@
   - third-party
     - [ ] google
     - [ ] firebase
-  - [ ] swagger
+  - [X] swagger
+  - [ ] eslint & prettier
+  
