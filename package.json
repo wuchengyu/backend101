@@ -1,0 +1,14 @@
+{
+  "name": "backend-yarn-workspace-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "core",
+    "router"
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
