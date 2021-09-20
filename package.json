@@ -14,7 +14,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
     "jest": "^27.2.0",
+    "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1"
   },
@@ -29,5 +31,16 @@
     "start:dev": "NODE_ENV=development nodemon --inspect -r dotenv/config router dotenv_config_path=.env.dev",
     "test": "jest --verbose",
     "test:coverage": "yarn test --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
