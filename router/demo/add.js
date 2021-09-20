@@ -1,16 +1,16 @@
-const express = require("express");
+const express = require('express');
 
-const { add } = require("core/demo");
+const { add } = require('core/demo');
 
 const router = express.Router();
 
-router.get("/:a(\\d+)/:b(\\d+)", (req, res) => {
+router.get('/:a(\\d+)/:b(\\d+)', (req, res) => {
   const { a, b } = req.params;
   const data = add(+a, +b);
   return res.json({
-    code: "SUCCESS",
+    code: 'SUCCESS',
     data,
   });
 });
 
-module.exports = router
+module.exports = router;
