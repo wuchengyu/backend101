@@ -41,6 +41,10 @@
     "**/*.js": [
       "prettier --write",
       "eslint --fix"
+    ],
+    "router/**/*.js": [
+      "yarn doc:gen",
+      "git add router/swagger.json"
     ]
   }
 }
