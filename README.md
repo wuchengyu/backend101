@@ -39,5 +39,6 @@
     - [ ] google
     - [ ] firebase
   - [X] swagger
-  - [ ] eslint & prettier
+  - [X] eslint & prettier
+  - [X] husky & lint-stage
   
