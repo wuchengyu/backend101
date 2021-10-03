@@ -28,6 +28,8 @@ if (DEV) {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 }
 
+app.get('/', (_req, res) => res.send(process.env.NODE_ENV));
+
 app.use('*', (_req, res) => res.status(404));
 
 app.listen(port, () => {

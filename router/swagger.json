@@ -32,29 +32,16 @@
     "application/json"
   ],
   "paths": {
+    "/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/demo/add/{a(\\\\d+)}/{b(\\\\d+)}": {
       "get": {
-        "tags": [
-          "Demo"
-        ],
-        "description": "",
-        "parameters": [
-          {
-            "name": "a(\\\\d+)",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "b(\\\\d+)",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {}
-      },
-      "post": {
         "tags": [
           "Demo"
         ],
