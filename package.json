@@ -27,7 +27,7 @@
     "doc:gen": "node scripts/generate-swagger.js",
     "lint": "prettier --check . && eslint .",
     "lint:fix": "prettier --write . && eslint --fix . --quiet",
-    "start": "NODE_ENV=prouction nodemon --inspect -r dotenv/config router",
+    "start": "NODE_ENV=prouction node --inspect -r dotenv/config router",
     "start:dev": "yarn doc:gen && NODE_ENV=development nodemon --inspect -r dotenv/config router dotenv_config_path=.env.dev",
     "test": "jest --verbose",
     "test:coverage": "yarn test --coverage"
