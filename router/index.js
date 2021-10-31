@@ -8,7 +8,7 @@ const demoAdd = require('router/demo/add');
 const DEV = process.env.NODE_ENV !== 'production';
 
 const host = process.env.HOST || 'localhost';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 9400;
 
 const app = express();
 
