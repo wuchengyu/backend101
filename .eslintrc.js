@@ -1,10 +1,9 @@
-const path = require('path');
-
 module.exports = {
   env: {
     commonjs: true,
     es2021: true,
     node: true,
+    jest: true,
   },
   globals: {
     jest: true,
@@ -18,15 +17,12 @@ module.exports = {
   ignorePatterns: ['**/__tests__/*.test.js', 'scripts/**/*.js'],
   rules: {
     'prettier/prettier': 'error',
-    'import/no-extraneous-dependencies': [
-      'warn',
-      {
-        devDependencies: false,
-        packageDir: [
-          path.join(__dirname, 'core'),
-          path.join(__dirname, 'router'),
-        ],
-      },
-    ],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: '*/tsconfig.json',
+      }, // this loads <rootdir>/tsconfig.json to eslint
+    },
   },
 };

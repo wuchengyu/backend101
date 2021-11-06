@@ -5,8 +5,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "core",
-    "router",
+    "server",
     "web"
   ],
   "devDependencies": {
@@ -34,6 +33,7 @@
     "prettier": "^2.4.1",
     "react-test-renderer": "^17.0.2",
     "sass": "^1.43.4",
+    "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
   "dependencies": {
@@ -43,8 +43,8 @@
     "doc:gen": "node scripts/generate-swagger.js",
     "lint": "prettier --check . && eslint .",
     "lint:fix": "prettier --write . && eslint --fix . --quiet",
-    "server:start": "NODE_ENV=prouction node --inspect -r dotenv/config router",
-    "server:dev": "yarn doc:gen && NODE_ENV=development nodemon --inspect -r dotenv/config router dotenv_config_path=.env.dev",
+    "server:start": "yarn workspace server start",
+    "server:dev": "yarn workspace server dev",
     "test": "jest --verbose",
     "test:coverage": "yarn test --coverage",
     "web:start": "yarn workspace web dev",
