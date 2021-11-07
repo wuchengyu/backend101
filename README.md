@@ -1,5 +1,5 @@
-## backend101
-後端練習筆記
+## web101
+web 全端練習筆記
 
 
 ### Quick Start
@@ -18,7 +18,10 @@ yarn install
 #### Start develop
 
 ``` shell
-yarn start:dev
+# server
+yarn server:dev
+# web
+yarn web:dev
 ```
 
 
@@ -28,7 +31,8 @@ yarn start:dev
 - yarn workspace
 - express
 - jest
-
+- typescript
+- next.js
 
 ### Description
 
@@ -37,36 +41,53 @@ yarn start:dev
 
 ```
 |-- Root
-    |-- .env.dev
     |-- .eslintrc.js
     |-- .gitignore
     |-- .prettierignore
     |-- README.md
+    |-- jest.config.js 
+    |-- lerna.json
     |-- package.json
     |-- prettier.config.js
     |-- yarn.lock
     |-- .github
-    |   |-- workflows
-    |       |-- test.yml
-    |-- core // 核心功能
-    |   |-- package.json // 獨立 workspace
-    |   |-- demo
-    |       |-- __tests__ // 測試案例
-    |           |-- index.test.js // .test.js 測試檔
-    |-- router
-    |   |-- index.js
-    |   |-- package.json // 獨立 workspace
-    |   |-- swagger.json // 自動生成的 Swagger 文件
-    |   |-- ex1
-    |       |-- other.js // Router /ex1/other
-    |-- scripts
-        |-- generate-swagger.js // 自動生成 Swagger 文件腳本
+    |-- .vscode
+    |   |-- settings.json
+    |-- server
+    |   |-- jest.config.js
+    |   |-- package.json
+    |   |-- tsconfig.json
+    |   |-- router
+    |       |-- index.js
+    |       |-- swagger.json
+    |       |-- demo
+    |       |   |-- add.js
+    |       |-- note
+    |-- web
+        |-- .babelrc.json
+        |-- .env.local
+        |-- .gitignore
+        |-- README.md
+        |-- jest.config.js
+        |-- jest.setup.js
+        |-- next-env.d.ts
+        |-- next.config.js // Rewrite to Backend
+        |-- package.json
+        |-- tsconfig.json
+        |-- __mocks__ // Some Mocks at next.js testing
+        |   |-- fileMock.js
+        |   |-- styleMock.js
+        |-- pages // Pages of Router
+        |-- public // Static File For Build
+        |-- styles
 
 ```
 
 #### Install new packages
 
 1. Install at Root
+
+通常加入開發用的 package
 
 ``` shell
 yarn install <new package> -W
@@ -88,12 +109,24 @@ yarn workspace <workspace> install <new package>
   - [ ] docker
   - [ ] k8s
   - [X] github actions
-- Develop
+- Front-End
+  - [ ] next.js
+  - [ ] graphQL
+  - [ ] state manager
+  - [ ] seo
+  - [ ] i18n
+  - [ ] Design System (ex. ANTD, MUI)
+- Back-End
+  - [ ] express
   - [ ] redis
   - [ ] mongodb
+  - [ ] orm
+  - [ ] graphQL
+- Develop
   - third-party
     - [ ] google
     - [ ] firebase
+  - [X] typescript
   - [X] swagger
   - [X] eslint & prettier
   - [X] husky & lint-stage

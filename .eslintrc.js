@@ -25,4 +25,11 @@ module.exports = {
       }, // this loads <rootdir>/tsconfig.json to eslint
     },
   },
+  overrides: [
+    // Only uses Testing Library lint rules in test files
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
 };
