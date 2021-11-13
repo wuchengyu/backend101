@@ -1,11 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import demoHello from '@/router/demo/hello';
-
-const DEV = process.env.NODE_ENV !== 'production';
-
-const host = process.env.HOST || 'localhost';
-const port = process.env.PORT || 9400;
+import { PORT } from '@/utils/config';
 
 const app = express();
 
@@ -24,6 +20,6 @@ app.get('/', (_req, res) => res.send(process.env.NODE_ENV));
 
 app.use('*', (_req, res) => res.status(404));
 
-app.listen(port, () => {
-  console.log(`> Start server @http://${host}:${port}`);
+app.listen(PORT, () => {
+  console.log(`> Start server`);
 });
