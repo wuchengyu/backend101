@@ -1,9 +1,8 @@
-const express = require('express');
-const cors = require('cors');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('@/router/swagger.json');
-
-const demoAdd = require('./demo/add');
+import express from 'express';
+import cors from 'cors';
+import swaggerUI from 'swagger-ui-express';
+import swaggerDocument from '@/router/swagger.json';
+import demoAdd from '@/router/demo/add';
 
 const DEV = process.env.NODE_ENV !== 'production';
 
@@ -25,7 +24,7 @@ app.use('/demo/add', demoAdd);
 
 if (DEV) {
   // Swagger
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+  app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 }
 
 app.get('/', (_req, res) => res.send(process.env.NODE_ENV));
