@@ -1,4 +1,4 @@
-const demo = require('@/demo');
+const demo = require('@/core');
 
 describe('#Demo Testing', () => {
   describe('Add', () => {

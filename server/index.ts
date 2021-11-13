@@ -1,8 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import swaggerUI from 'swagger-ui-express';
-import swaggerDocument from '@/router/swagger.json';
-import demoAdd from '@/router/demo/add';
+import demoHello from '@/router/demo/hello';
 
 const DEV = process.env.NODE_ENV !== 'production';
 
@@ -20,12 +18,7 @@ app.use((req, _res, next) => {
   next();
 });
 
-app.use('/demo/add', demoAdd);
-
-if (DEV) {
-  // Swagger
-  app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
-}
+app.use('/demo/hello', demoHello);
 
 app.get('/', (_req, res) => res.send(process.env.NODE_ENV));
 
